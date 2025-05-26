@@ -1,0 +1,12 @@
+body {
+  padding: 0px;
+}
+
+.card img {
+  height: 20dvh;
+  width: 20dvh;
+}
+
+.border-tosee {
+  border: 1px solid black;
+}
