@@ -29,10 +29,10 @@
           <div class="col-2 border-tosee"><b>Total:</b></div>
         </div>
         <div class="row g-1">
-          <div class="col-5 item-name"></div>
-          <div class="col-2 item-qty"></div>
-          <div class="col-2 item-cost"></div>
-          <div class="col-2 total-item-cost"></div>
+          <div class="col-5 item-name" id="item-name"></div>
+          <div class="col-2 item-qty" id="item-qty"></div>
+          <div class="col-2 item-cost" id="item-cost"></div>
+          <div class="col-2 total-item-cost" id="total-item-cost"></div>
         </div>
       </div>
       <div class="col-md-6 order-1 order-md-2 " id="options">
@@ -47,7 +47,7 @@
                 <h5 class="card-title text-dark">Strawberry</h5>
                 <p class="fw-bold text-end">$1.25</p>
                 <div>
-                  <button class="btn btn-warning rounded">
+                  <button class="btn btn-warning rounded" onclick="addItemByName('Strawberry')">
                     Add to Order
                   </button>
                 </div>
@@ -64,7 +64,7 @@
                 <h5 class="card-title text-dark">Mint</h5>
                 <p class="fw-bold text-end">$1.25</p>
                 <div>
-                  <button class="btn btn-warning rounded">
+                  <button class="btn btn-warning rounded" onclick="addItemByName('Mint')">
                     Add to Order
                   </button>
                 </div>
@@ -79,9 +79,9 @@
               </div>
               <div class="card-body">
                 <h5 class="card-title text-dark">Vanilla</h5>
-                <p class="fw-bold text-end">$1</p>
+                <p class="fw-bold text-end">$1.00</p>
                 <div>
-                  <button class="btn btn-warning rounded">
+                  <button class="btn btn-warning rounded" onclick="addItemByName('Vanilla')">
                     Add to Order
                   </button>
                 </div>
@@ -100,7 +100,7 @@
                 <h5 class="card-title text-dark">Sprinkles</h5>
                 <p class="fw-bold text-end">$.25</p>
                 <div>
-                  <button class="btn btn-warning rounded">
+                  <button class="btn btn-warning rounded" onclick="addItemByName('Sprinkles')">
                     Add to Order
                   </button>
                 </div>
@@ -117,7 +117,7 @@
                 <h5 class="card-title text-dark">Chocolate Chips</h5>
                 <p class="fw-bold text-end">$.25</p>
                 <div>
-                  <button class="btn btn-warning rounded">
+                  <button class="btn btn-warning rounded" onclick="addItemByName('Chocolate Chips')">
                     Add to Order
                   </button>
                 </div>
@@ -134,7 +134,7 @@
                 <h5 class="card-title text-dark">Cookie Chunks</h5>
                 <p class="fw-bold text-end">$.50</p>
                 <div>
-                  <button class="btn btn-warning rounded">
+                  <button class="btn btn-warning rounded" onclick="addItemByName('Cookie Chunks')">
                     Add to Order
                   </button>
                 </div>
