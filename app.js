@@ -50,10 +50,10 @@ function drawOrder() {
     if (item.quantity > 0) {
       console.log(`${item.name}  ${item.quantity} x $${(item.price).toFixed(2)} $${(item.quantity * item.price).toFixed(2)}`)
 
-      itemNameContent += `<p>${item.name}  </p>`
-      itemQtyContent += `<p> ${item.quantity} x </p>`
-      itemCostContent += `<p> $${(item.price).toFixed(2)} </p>`
-      totalCostItemContent += `<p> $${(item.quantity * item.price).toFixed(2)} </p>`
+      itemNameContent += `<p>${item.name}  </p><hr>`
+      itemQtyContent += `<p> ${item.quantity} x </p><hr>`
+      itemCostContent += `<p> $${(item.price).toFixed(2)} </p><hr>`
+      totalCostItemContent += `<p> $${(item.quantity * item.price).toFixed(2)} </p><hr>`
 
     }
   }
@@ -74,6 +74,5 @@ function getOrderTotal() {
     total += item.price * item.quantity
 
   }
-  console.log("💵", total)
   return total;
 }
