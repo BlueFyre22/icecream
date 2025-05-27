@@ -76,3 +76,13 @@ function getOrderTotal() {
   }
   return total;
 }
+
+function orderPlaced() {
+  for (i = 0; i < menu.length; i++) {
+    const item = menu[i]
+    if (item.quantity > 0) {
+      item.quantity = 0
+    }
+  }
+  drawOrder()
+}
