@@ -35,12 +35,15 @@ const itemNameListElm = document.getElementById("item-name")
 const itemQtyListElm = document.getElementById("item-qty")
 const itemCostListElm = document.getElementById("item-cost")
 const totalCostItemListElm = document.getElementById("total-item-cost")
+const totalElm = document.getElementById("total-cost-all-items")
+
 
 function drawOrder() {
   let itemNameContent = ""
   let itemQtyContent = ""
   let itemCostContent = ""
   let totalCostItemContent = ""
+
 
   for (let i = 0; i < menu.length; i++) {
     const item = menu[i]
@@ -51,6 +54,7 @@ function drawOrder() {
       itemQtyContent += `<p> ${item.quantity} x </p>`
       itemCostContent += `<p> $${(item.price).toFixed(2)} </p>`
       totalCostItemContent += `<p> $${(item.quantity * item.price).toFixed(2)} </p>`
+
     }
   }
 
@@ -58,4 +62,18 @@ function drawOrder() {
   itemQtyListElm.innerHTML = itemQtyContent
   itemCostListElm.innerHTML = itemCostContent
   totalCostItemListElm.innerHTML = totalCostItemContent
+  const orderTotal = getOrderTotal()
+  totalElm.innerText = orderTotal.toFixed(2)
+
+}
+
+function getOrderTotal() {
+  let total = 0
+  for (let i = 0; i < menu.length; i++) {
+    const item = menu[i]
+    total += item.price * item.quantity
+
+  }
+  console.log("💵", total)
+  return total;
 }
